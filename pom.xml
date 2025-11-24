@@ -10,6 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <properties>
+        <jetty.port>9090</jetty.port>
+    </properties>
+
     <dependencies>
         <!-- Jakarta Servlet API -->
         <dependency>
@@ -29,6 +33,9 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>11.0.21</version>
+                <configuration>
+                    <port>${jetty.port}</port>
+                </configuration>
             </plugin>
         </plugins>
 
